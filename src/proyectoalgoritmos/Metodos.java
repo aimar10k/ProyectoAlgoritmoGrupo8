@@ -9,5 +9,13 @@ package proyectoalgoritmos;
  * @author AimarHP
  */
 public class Metodos {
+    String nombre;
     
+    public void leerNombre(){
+        
+    }
+    
+    public void puntaje(){
+        
+    }
 }
