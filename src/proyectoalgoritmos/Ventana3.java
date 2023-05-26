@@ -33,6 +33,7 @@ public class Ventana3 extends javax.swing.JFrame {
         BtnMenu = new javax.swing.JButton();
         BtnMusic = new javax.swing.JButton();
         car = new javax.swing.JLabel();
+        ContenedorObjetos = new javax.swing.JLabel();
         FranjaBoton1 = new javax.swing.JLabel();
         FranjaBoton2 = new javax.swing.JLabel();
         FranjaBoton3 = new javax.swing.JLabel();
@@ -73,7 +74,10 @@ public class Ventana3 extends javax.swing.JFrame {
         getContentPane().add(BtnMusic, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 30, 80, 70));
 
         car.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/car.png"))); // NOI18N
-        getContentPane().add(car, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 40, 280, 200));
+        getContentPane().add(car, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 70, 280, 200));
+
+        ContenedorObjetos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/campObjetos.png"))); // NOI18N
+        getContentPane().add(ContenedorObjetos, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 30, 270, 270));
 
         FranjaBoton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnopciones.png"))); // NOI18N
         getContentPane().add(FranjaBoton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, 350, 110));
@@ -133,6 +137,7 @@ public class Ventana3 extends javax.swing.JFrame {
     private javax.swing.JButton BtnHome;
     private javax.swing.JButton BtnMenu;
     private javax.swing.JButton BtnMusic;
+    private javax.swing.JLabel ContenedorObjetos;
     private javax.swing.JLabel Fondo3;
     private javax.swing.JLabel FranjaBoton1;
     private javax.swing.JLabel FranjaBoton2;
