@@ -16,7 +16,7 @@ public class Ventana extends javax.swing.JFrame {
      */
     public Ventana() {
         initComponents();
-        this.setLocationRelativeTo(null);
+        this.setLocationRelativeTo(null);      
     }
 
     /**
@@ -104,6 +104,7 @@ public class Ventana extends javax.swing.JFrame {
         Ventana2 v2 = new Ventana2();
         v2.setmostrar(InputNombre.getText());
         v2.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_BtnNombreActionPerformed
 
     /**
