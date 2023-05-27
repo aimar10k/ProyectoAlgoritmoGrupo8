@@ -32,8 +32,8 @@ public class Ventana3 extends javax.swing.JFrame {
         BtnConfig = new javax.swing.JButton();
         BtnMenu = new javax.swing.JButton();
         BtnMusic = new javax.swing.JButton();
-        car = new javax.swing.JLabel();
-        ContenedorObjetos = new javax.swing.JLabel();
+        Manzana = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         FranjaBoton1 = new javax.swing.JLabel();
         FranjaBoton2 = new javax.swing.JLabel();
         FranjaBoton3 = new javax.swing.JLabel();
@@ -73,11 +73,16 @@ public class Ventana3 extends javax.swing.JFrame {
         BtnMusic.setVerifyInputWhenFocusTarget(false);
         getContentPane().add(BtnMusic, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 30, 80, 70));
 
-        car.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/car.png"))); // NOI18N
-        getContentPane().add(car, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 70, 280, 200));
+        Manzana.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/apple.png"))); // NOI18N
+        getContentPane().add(Manzana, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, 200, 200));
 
-        ContenedorObjetos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/campObjetos.png"))); // NOI18N
-        getContentPane().add(ContenedorObjetos, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 30, 270, 270));
+        jButton1.setFont(new java.awt.Font("Super Comic", 1, 36)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("CAR");
+        jButton1.setBorder(null);
+        jButton1.setContentAreaFilled(false);
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 330, 190, 60));
 
         FranjaBoton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnopciones.png"))); // NOI18N
         getContentPane().add(FranjaBoton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, 350, 110));
@@ -137,12 +142,12 @@ public class Ventana3 extends javax.swing.JFrame {
     private javax.swing.JButton BtnHome;
     private javax.swing.JButton BtnMenu;
     private javax.swing.JButton BtnMusic;
-    private javax.swing.JLabel ContenedorObjetos;
     private javax.swing.JLabel Fondo3;
     private javax.swing.JLabel FranjaBoton1;
     private javax.swing.JLabel FranjaBoton2;
     private javax.swing.JLabel FranjaBoton3;
     private javax.swing.JLabel FranjaBoton4;
-    private javax.swing.JLabel car;
+    private javax.swing.JLabel Manzana;
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }
