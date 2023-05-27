@@ -12,7 +12,7 @@ package proyectoalgoritmos;
 public class Ventana3 extends javax.swing.JFrame {
 
     /**
-     * Creates new form Ventana3
+     * Creates new form Ventana4
      */
     public Ventana3() {
         initComponents();
@@ -28,31 +28,31 @@ public class Ventana3 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        BtnHome = new javax.swing.JButton();
+        BtnHome1 = new javax.swing.JButton();
         BtnConfig = new javax.swing.JButton();
         BtnMenu = new javax.swing.JButton();
         BtnMusic = new javax.swing.JButton();
-        Manzana = new javax.swing.JLabel();
-        HOME1 = new javax.swing.JButton();
-        HOME = new javax.swing.JButton();
-        APPLE = new javax.swing.JButton();
-        CAR = new javax.swing.JButton();
-        FranjaBoton1 = new javax.swing.JLabel();
-        FranjaBoton2 = new javax.swing.JLabel();
-        FranjaBoton3 = new javax.swing.JLabel();
-        FranjaBoton4 = new javax.swing.JLabel();
-        Fondo3 = new javax.swing.JLabel();
+        BtnAudio1 = new javax.swing.JButton();
+        BtnAudio2 = new javax.swing.JButton();
+        BtnAudio3 = new javax.swing.JButton();
+        Level1 = new javax.swing.JLabel();
+        Text1 = new javax.swing.JLabel();
+        Text2 = new javax.swing.JLabel();
+        Text3 = new javax.swing.JLabel();
+        AppleIMG = new javax.swing.JLabel();
+        Contenedor = new javax.swing.JLabel();
+        Fondo4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BtnHome.setBackground(new java.awt.Color(117, 194, 197));
-        BtnHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icono_home.png"))); // NOI18N
-        BtnHome.setBorder(null);
-        BtnHome.setContentAreaFilled(false);
-        BtnHome.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(BtnHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, -1));
+        BtnHome1.setBackground(new java.awt.Color(117, 194, 197));
+        BtnHome1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icono_home.png"))); // NOI18N
+        BtnHome1.setBorder(null);
+        BtnHome1.setContentAreaFilled(false);
+        BtnHome1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(BtnHome1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, -1));
 
         BtnConfig.setBackground(new java.awt.Color(117, 194, 197));
         BtnConfig.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icono_config.png"))); // NOI18N
@@ -76,70 +76,97 @@ public class Ventana3 extends javax.swing.JFrame {
         BtnMusic.setVerifyInputWhenFocusTarget(false);
         getContentPane().add(BtnMusic, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 30, 80, 70));
 
-        Manzana.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/apple.png"))); // NOI18N
-        getContentPane().add(Manzana, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, 200, 200));
+        BtnAudio1.setBackground(new java.awt.Color(117, 194, 197));
+        BtnAudio1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icono_audio.png"))); // NOI18N
+        BtnAudio1.setBorder(null);
+        BtnAudio1.setContentAreaFilled(false);
+        BtnAudio1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnAudio1.setDoubleBuffered(true);
+        BtnAudio1.setMargin(new java.awt.Insets(20, 20, 20, 20));
+        BtnAudio1.setMaximumSize(new java.awt.Dimension(60, 55));
+        BtnAudio1.setMinimumSize(new java.awt.Dimension(60, 55));
+        BtnAudio1.setPreferredSize(new java.awt.Dimension(60, 55));
+        BtnAudio1.setVerifyInputWhenFocusTarget(false);
+        getContentPane().add(BtnAudio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 190, -1, 60));
 
-        HOME1.setFont(new java.awt.Font("Super Comic", 1, 36)); // NOI18N
-        HOME1.setForeground(new java.awt.Color(255, 255, 255));
-        HOME1.setText("CHEESE");
-        HOME1.setBorder(null);
-        HOME1.setContentAreaFilled(false);
-        HOME1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(HOME1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 440, 290, 60));
+        BtnAudio2.setBackground(new java.awt.Color(117, 194, 197));
+        BtnAudio2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icono_audio.png"))); // NOI18N
+        BtnAudio2.setBorder(null);
+        BtnAudio2.setContentAreaFilled(false);
+        BtnAudio2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnAudio2.setDoubleBuffered(true);
+        BtnAudio2.setMargin(new java.awt.Insets(20, 20, 20, 20));
+        BtnAudio2.setMaximumSize(new java.awt.Dimension(60, 55));
+        BtnAudio2.setMinimumSize(new java.awt.Dimension(60, 55));
+        BtnAudio2.setPreferredSize(new java.awt.Dimension(60, 55));
+        BtnAudio2.setVerifyInputWhenFocusTarget(false);
+        getContentPane().add(BtnAudio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 370, -1, 70));
+        BtnAudio2.getAccessibleContext().setAccessibleDescription("");
 
-        HOME.setFont(new java.awt.Font("Super Comic", 1, 36)); // NOI18N
-        HOME.setForeground(new java.awt.Color(255, 255, 255));
-        HOME.setText("HOME");
-        HOME.setBorder(null);
-        HOME.setContentAreaFilled(false);
-        HOME.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(HOME, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 310, 60));
+        BtnAudio3.setBackground(new java.awt.Color(117, 194, 197));
+        BtnAudio3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icono_audio.png"))); // NOI18N
+        BtnAudio3.setBorder(null);
+        BtnAudio3.setContentAreaFilled(false);
+        BtnAudio3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnAudio3.setDoubleBuffered(true);
+        BtnAudio3.setMargin(new java.awt.Insets(20, 20, 20, 20));
+        BtnAudio3.setMaximumSize(new java.awt.Dimension(60, 55));
+        BtnAudio3.setMinimumSize(new java.awt.Dimension(60, 55));
+        BtnAudio3.setPreferredSize(new java.awt.Dimension(60, 55));
+        BtnAudio3.setVerifyInputWhenFocusTarget(false);
+        getContentPane().add(BtnAudio3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 280, -1, 60));
 
-        APPLE.setFont(new java.awt.Font("Super Comic", 1, 36)); // NOI18N
-        APPLE.setForeground(new java.awt.Color(255, 255, 255));
-        APPLE.setText("APPLE");
-        APPLE.setBorder(null);
-        APPLE.setContentAreaFilled(false);
-        APPLE.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        APPLE.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                APPLEActionPerformed(evt);
-            }
-        });
-        getContentPane().add(APPLE, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 330, 290, 60));
+        Level1.setFont(new java.awt.Font("Super Comic", 1, 30)); // NOI18N
+        Level1.setForeground(new java.awt.Color(204, 255, 255));
+        Level1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Level1.setText("LEVEL 1");
+        Level1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Level1.setFocusTraversalPolicyProvider(true);
+        Level1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Level1.setName(""); // NOI18N
+        getContentPane().add(Level1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 210, 40));
 
-        CAR.setFont(new java.awt.Font("Super Comic", 1, 36)); // NOI18N
-        CAR.setForeground(new java.awt.Color(255, 255, 255));
-        CAR.setText("CAR");
-        CAR.setBorder(null);
-        CAR.setContentAreaFilled(false);
-        CAR.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(CAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, 290, 60));
+        Text1.setFont(new java.awt.Font("Super Comic", 1, 36)); // NOI18N
+        Text1.setForeground(new java.awt.Color(255, 255, 255));
+        Text1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Text1.setText("CAR");
+        Text1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Text1.setFocusTraversalPolicyProvider(true);
+        Text1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Text1.setName(""); // NOI18N
+        getContentPane().add(Text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 200, 210, 40));
 
-        FranjaBoton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnopciones.png"))); // NOI18N
-        getContentPane().add(FranjaBoton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, 350, 110));
+        Text2.setFont(new java.awt.Font("Super Comic", 1, 36)); // NOI18N
+        Text2.setForeground(new java.awt.Color(255, 255, 255));
+        Text2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Text2.setText("HOUSE");
+        Text2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Text2.setFocusTraversalPolicyProvider(true);
+        Text2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Text2.setName(""); // NOI18N
+        getContentPane().add(Text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 390, 210, 40));
 
-        FranjaBoton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnopciones.png"))); // NOI18N
-        getContentPane().add(FranjaBoton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, 350, 110));
+        Text3.setFont(new java.awt.Font("Super Comic", 1, 36)); // NOI18N
+        Text3.setForeground(new java.awt.Color(255, 255, 255));
+        Text3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Text3.setText("APPLE");
+        Text3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Text3.setFocusTraversalPolicyProvider(true);
+        Text3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Text3.setName(""); // NOI18N
+        getContentPane().add(Text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, 210, 40));
 
-        FranjaBoton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnopciones.png"))); // NOI18N
-        getContentPane().add(FranjaBoton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 420, 350, 110));
+        AppleIMG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/apple_min.png"))); // NOI18N
+        getContentPane().add(AppleIMG, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 100, 100));
 
-        FranjaBoton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnopciones.png"))); // NOI18N
-        getContentPane().add(FranjaBoton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 310, 350, 110));
+        Contenedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/contenedor.png"))); // NOI18N
+        getContentPane().add(Contenedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 640, 500));
 
-        Fondo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Fondo3.jpg"))); // NOI18N
-        getContentPane().add(Fondo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        Fondo4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Fondo4.jpg"))); // NOI18N
+        getContentPane().add(Fondo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void APPLEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_APPLEActionPerformed
-        // TODO add your handling code here:
-        Ventana4 v4 = new Ventana4();
-        v4.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_APPLEActionPerformed
 
     /**
      * @param args the command line arguments
@@ -167,6 +194,9 @@ public class Ventana3 extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Ventana3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -177,19 +207,19 @@ public class Ventana3 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton APPLE;
+    private javax.swing.JLabel AppleIMG;
+    private javax.swing.JButton BtnAudio1;
+    private javax.swing.JButton BtnAudio2;
+    private javax.swing.JButton BtnAudio3;
     private javax.swing.JButton BtnConfig;
-    private javax.swing.JButton BtnHome;
+    private javax.swing.JButton BtnHome1;
     private javax.swing.JButton BtnMenu;
     private javax.swing.JButton BtnMusic;
-    private javax.swing.JButton CAR;
-    private javax.swing.JLabel Fondo3;
-    private javax.swing.JLabel FranjaBoton1;
-    private javax.swing.JLabel FranjaBoton2;
-    private javax.swing.JLabel FranjaBoton3;
-    private javax.swing.JLabel FranjaBoton4;
-    private javax.swing.JButton HOME;
-    private javax.swing.JButton HOME1;
-    private javax.swing.JLabel Manzana;
+    private javax.swing.JLabel Contenedor;
+    private javax.swing.JLabel Fondo4;
+    private javax.swing.JLabel Level1;
+    private javax.swing.JLabel Text1;
+    private javax.swing.JLabel Text2;
+    private javax.swing.JLabel Text3;
     // End of variables declaration//GEN-END:variables
 }
