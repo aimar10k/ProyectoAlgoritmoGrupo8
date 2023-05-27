@@ -68,6 +68,7 @@ public class Ventana2 extends javax.swing.JFrame {
 
         DatoNombre.setFont(new java.awt.Font("Freitag Trial Heavy", 0, 36)); // NOI18N
         DatoNombre.setForeground(new java.awt.Color(255, 255, 255));
+        DatoNombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         getContentPane().add(DatoNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 500, 260, 50));
 
         CampNombre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/campText.png"))); // NOI18N
@@ -99,6 +100,11 @@ public class Ventana2 extends javax.swing.JFrame {
         BtnFacil.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BtnFacil.setRequestFocusEnabled(false);
         BtnFacil.setVerifyInputWhenFocusTarget(false);
+        BtnFacil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnFacilActionPerformed(evt);
+            }
+        });
         getContentPane().add(BtnFacil, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 270, 250));
 
         Fondo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Fondo2.jpg"))); // NOI18N
@@ -106,6 +112,13 @@ public class Ventana2 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BtnFacilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnFacilActionPerformed
+        // TODO add your handling code here:
+        Ventana3 v3 = new Ventana3();
+        v3.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_BtnFacilActionPerformed
 
     /**
      * @param args the command line arguments

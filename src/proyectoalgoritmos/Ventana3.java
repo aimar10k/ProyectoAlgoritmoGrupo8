@@ -33,7 +33,10 @@ public class Ventana3 extends javax.swing.JFrame {
         BtnMenu = new javax.swing.JButton();
         BtnMusic = new javax.swing.JButton();
         Manzana = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        HOME1 = new javax.swing.JButton();
+        HOME = new javax.swing.JButton();
+        APPLE = new javax.swing.JButton();
+        CAR = new javax.swing.JButton();
         FranjaBoton1 = new javax.swing.JLabel();
         FranjaBoton2 = new javax.swing.JLabel();
         FranjaBoton3 = new javax.swing.JLabel();
@@ -76,13 +79,42 @@ public class Ventana3 extends javax.swing.JFrame {
         Manzana.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/apple.png"))); // NOI18N
         getContentPane().add(Manzana, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, 200, 200));
 
-        jButton1.setFont(new java.awt.Font("Super Comic", 1, 36)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("CAR");
-        jButton1.setBorder(null);
-        jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 330, 190, 60));
+        HOME1.setFont(new java.awt.Font("Super Comic", 1, 36)); // NOI18N
+        HOME1.setForeground(new java.awt.Color(255, 255, 255));
+        HOME1.setText("CHEESE");
+        HOME1.setBorder(null);
+        HOME1.setContentAreaFilled(false);
+        HOME1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(HOME1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 440, 290, 60));
+
+        HOME.setFont(new java.awt.Font("Super Comic", 1, 36)); // NOI18N
+        HOME.setForeground(new java.awt.Color(255, 255, 255));
+        HOME.setText("HOME");
+        HOME.setBorder(null);
+        HOME.setContentAreaFilled(false);
+        HOME.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(HOME, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 310, 60));
+
+        APPLE.setFont(new java.awt.Font("Super Comic", 1, 36)); // NOI18N
+        APPLE.setForeground(new java.awt.Color(255, 255, 255));
+        APPLE.setText("APPLE");
+        APPLE.setBorder(null);
+        APPLE.setContentAreaFilled(false);
+        APPLE.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        APPLE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                APPLEActionPerformed(evt);
+            }
+        });
+        getContentPane().add(APPLE, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 330, 290, 60));
+
+        CAR.setFont(new java.awt.Font("Super Comic", 1, 36)); // NOI18N
+        CAR.setForeground(new java.awt.Color(255, 255, 255));
+        CAR.setText("CAR");
+        CAR.setBorder(null);
+        CAR.setContentAreaFilled(false);
+        CAR.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(CAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, 290, 60));
 
         FranjaBoton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnopciones.png"))); // NOI18N
         getContentPane().add(FranjaBoton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, 350, 110));
@@ -101,6 +133,13 @@ public class Ventana3 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void APPLEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_APPLEActionPerformed
+        // TODO add your handling code here:
+        Ventana4 v4 = new Ventana4();
+        v4.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_APPLEActionPerformed
 
     /**
      * @param args the command line arguments
@@ -138,16 +177,19 @@ public class Ventana3 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton APPLE;
     private javax.swing.JButton BtnConfig;
     private javax.swing.JButton BtnHome;
     private javax.swing.JButton BtnMenu;
     private javax.swing.JButton BtnMusic;
+    private javax.swing.JButton CAR;
     private javax.swing.JLabel Fondo3;
     private javax.swing.JLabel FranjaBoton1;
     private javax.swing.JLabel FranjaBoton2;
     private javax.swing.JLabel FranjaBoton3;
     private javax.swing.JLabel FranjaBoton4;
+    private javax.swing.JButton HOME;
+    private javax.swing.JButton HOME1;
     private javax.swing.JLabel Manzana;
-    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }
