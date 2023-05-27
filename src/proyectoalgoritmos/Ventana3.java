@@ -39,7 +39,9 @@ public class Ventana3 extends javax.swing.JFrame {
         Text1 = new javax.swing.JLabel();
         Text2 = new javax.swing.JLabel();
         Text3 = new javax.swing.JLabel();
+        CarIMG = new javax.swing.JLabel();
         AppleIMG = new javax.swing.JLabel();
+        AppleIMG2 = new javax.swing.JLabel();
         Contenedor = new javax.swing.JLabel();
         Fondo4 = new javax.swing.JLabel();
 
@@ -156,13 +158,19 @@ public class Ventana3 extends javax.swing.JFrame {
         Text3.setName(""); // NOI18N
         getContentPane().add(Text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, 210, 40));
 
-        AppleIMG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/apple_min.png"))); // NOI18N
-        getContentPane().add(AppleIMG, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 100, 100));
+        CarIMG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/car_min.png"))); // NOI18N
+        getContentPane().add(CarIMG, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, 100, 100));
+
+        AppleIMG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/house_min.png"))); // NOI18N
+        getContentPane().add(AppleIMG, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 360, 100, 100));
+
+        AppleIMG2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/apple_min.png"))); // NOI18N
+        getContentPane().add(AppleIMG2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 100, 100));
 
         Contenedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/contenedor.png"))); // NOI18N
         getContentPane().add(Contenedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 640, 500));
 
-        Fondo4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Fondo4.jpg"))); // NOI18N
+        Fondo4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Fondo3.jpg"))); // NOI18N
         getContentPane().add(Fondo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
@@ -208,6 +216,7 @@ public class Ventana3 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AppleIMG;
+    private javax.swing.JLabel AppleIMG2;
     private javax.swing.JButton BtnAudio1;
     private javax.swing.JButton BtnAudio2;
     private javax.swing.JButton BtnAudio3;
@@ -215,6 +224,7 @@ public class Ventana3 extends javax.swing.JFrame {
     private javax.swing.JButton BtnHome1;
     private javax.swing.JButton BtnMenu;
     private javax.swing.JButton BtnMusic;
+    private javax.swing.JLabel CarIMG;
     private javax.swing.JLabel Contenedor;
     private javax.swing.JLabel Fondo4;
     private javax.swing.JLabel Level1;
