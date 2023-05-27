@@ -30,11 +30,13 @@ public class Ventana3 extends javax.swing.JFrame {
 
         BtnHome1 = new javax.swing.JButton();
         BtnConfig = new javax.swing.JButton();
-        BtnMenu = new javax.swing.JButton();
+        BtnNext = new javax.swing.JButton();
+        BtnPrev = new javax.swing.JButton();
         BtnMusic = new javax.swing.JButton();
         BtnAudio1 = new javax.swing.JButton();
         BtnAudio2 = new javax.swing.JButton();
         BtnAudio3 = new javax.swing.JButton();
+        BtnMenu1 = new javax.swing.JButton();
         Level1 = new javax.swing.JLabel();
         Text1 = new javax.swing.JLabel();
         Text2 = new javax.swing.JLabel();
@@ -63,12 +65,29 @@ public class Ventana3 extends javax.swing.JFrame {
         BtnConfig.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(BtnConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, 80, -1));
 
-        BtnMenu.setBackground(new java.awt.Color(117, 194, 197));
-        BtnMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icono_menu.png"))); // NOI18N
-        BtnMenu.setBorder(null);
-        BtnMenu.setContentAreaFilled(false);
-        BtnMenu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(BtnMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 30, -1, -1));
+        BtnNext.setBackground(new java.awt.Color(117, 194, 197));
+        BtnNext.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icono_next.png"))); // NOI18N
+        BtnNext.setBorder(null);
+        BtnNext.setContentAreaFilled(false);
+        BtnNext.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnNext.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnNextActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BtnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 450, -1, -1));
+
+        BtnPrev.setBackground(new java.awt.Color(117, 194, 197));
+        BtnPrev.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icono_prev.png"))); // NOI18N
+        BtnPrev.setBorder(null);
+        BtnPrev.setContentAreaFilled(false);
+        BtnPrev.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnPrev.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnPrevActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BtnPrev, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 450, -1, -1));
 
         BtnMusic.setBackground(new java.awt.Color(117, 194, 197));
         BtnMusic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icono_music.png"))); // NOI18N
@@ -117,6 +136,13 @@ public class Ventana3 extends javax.swing.JFrame {
         BtnAudio3.setPreferredSize(new java.awt.Dimension(60, 55));
         BtnAudio3.setVerifyInputWhenFocusTarget(false);
         getContentPane().add(BtnAudio3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 280, -1, 60));
+
+        BtnMenu1.setBackground(new java.awt.Color(117, 194, 197));
+        BtnMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icono_menu.png"))); // NOI18N
+        BtnMenu1.setBorder(null);
+        BtnMenu1.setContentAreaFilled(false);
+        BtnMenu1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(BtnMenu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 30, -1, -1));
 
         Level1.setFont(new java.awt.Font("Super Comic", 1, 30)); // NOI18N
         Level1.setForeground(new java.awt.Color(204, 255, 255));
@@ -176,6 +202,20 @@ public class Ventana3 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void BtnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnNextActionPerformed
+        // TODO add your handling code here:
+        Ventana4 v4 = new Ventana4();
+        v4.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_BtnNextActionPerformed
+
+    private void BtnPrevActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnPrevActionPerformed
+        // TODO add your handling code here:
+        Ventana2 v2 = new Ventana2();
+        v2.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_BtnPrevActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -222,8 +262,10 @@ public class Ventana3 extends javax.swing.JFrame {
     private javax.swing.JButton BtnAudio3;
     private javax.swing.JButton BtnConfig;
     private javax.swing.JButton BtnHome1;
-    private javax.swing.JButton BtnMenu;
+    private javax.swing.JButton BtnMenu1;
     private javax.swing.JButton BtnMusic;
+    private javax.swing.JButton BtnNext;
+    private javax.swing.JButton BtnPrev;
     private javax.swing.JLabel CarIMG;
     private javax.swing.JLabel Contenedor;
     private javax.swing.JLabel Fondo4;

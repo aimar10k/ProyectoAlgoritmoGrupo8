@@ -128,7 +128,7 @@ public class Ventana4 extends javax.swing.JFrame {
         FranjaBoton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnopciones.png"))); // NOI18N
         getContentPane().add(FranjaBoton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 310, 350, 110));
 
-        Fondo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Fondo4.jpg"))); // NOI18N
+        Fondo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Fondo3.jpg"))); // NOI18N
         getContentPane().add(Fondo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
