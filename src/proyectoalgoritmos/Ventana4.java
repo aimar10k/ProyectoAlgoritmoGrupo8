@@ -89,7 +89,7 @@ public class Ventana4 extends javax.swing.JFrame {
 
         HOME.setFont(new java.awt.Font("Super Comic", 1, 36)); // NOI18N
         HOME.setForeground(new java.awt.Color(255, 255, 255));
-        HOME.setText("HOME");
+        HOME.setText("HOUSE");
         HOME.setBorder(null);
         HOME.setContentAreaFilled(false);
         HOME.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
