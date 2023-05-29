@@ -9,13 +9,24 @@ package proyectoalgoritmos;
  * @author AimarHP
  */
 public class Metodos {
-    String nombre;
+    public String nombre;
     
-    public void leerNombre(){
-        
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
     
-    public void puntaje(){
-        
+    
+    public void leerNombre(String nombre){
+        this.nombre = nombre;
     }
+
+    void setVisible(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
 }

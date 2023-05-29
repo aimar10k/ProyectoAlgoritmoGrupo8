@@ -14,11 +14,11 @@ public class Ventana3 extends javax.swing.JFrame {
     /**
      * Creates new form Ventana4
      */
+    
     public Ventana3() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -202,6 +202,9 @@ public class Ventana3 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+     private void InputNombreActionPerformed(java.awt.event.ActionEvent evt) {                                            
+        // TODO add your handling code here:
+    } 
     private void BtnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnNextActionPerformed
         // TODO add your handling code here:
         Ventana4 v4 = new Ventana4();
