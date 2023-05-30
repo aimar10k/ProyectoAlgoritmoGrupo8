@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package proyectoalgoritmos;
+import java.applet.AudioClip;
 
 /**
  *
@@ -34,8 +35,8 @@ public class Ventana3 extends javax.swing.JFrame {
         BtnPrev = new javax.swing.JButton();
         BtnMusic = new javax.swing.JButton();
         BtnAudio1 = new javax.swing.JButton();
-        BtnAudio2 = new javax.swing.JButton();
         BtnAudio3 = new javax.swing.JButton();
+        BtnAudio2 = new javax.swing.JButton();
         BtnMenu1 = new javax.swing.JButton();
         Level1 = new javax.swing.JLabel();
         Text1 = new javax.swing.JLabel();
@@ -108,21 +109,12 @@ public class Ventana3 extends javax.swing.JFrame {
         BtnAudio1.setMinimumSize(new java.awt.Dimension(60, 55));
         BtnAudio1.setPreferredSize(new java.awt.Dimension(60, 55));
         BtnAudio1.setVerifyInputWhenFocusTarget(false);
+        BtnAudio1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BtnAudio1MouseClicked(evt);
+            }
+        });
         getContentPane().add(BtnAudio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 190, -1, 60));
-
-        BtnAudio2.setBackground(new java.awt.Color(117, 194, 197));
-        BtnAudio2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icono_audio.png"))); // NOI18N
-        BtnAudio2.setBorder(null);
-        BtnAudio2.setContentAreaFilled(false);
-        BtnAudio2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BtnAudio2.setDoubleBuffered(true);
-        BtnAudio2.setMargin(new java.awt.Insets(20, 20, 20, 20));
-        BtnAudio2.setMaximumSize(new java.awt.Dimension(60, 55));
-        BtnAudio2.setMinimumSize(new java.awt.Dimension(60, 55));
-        BtnAudio2.setPreferredSize(new java.awt.Dimension(60, 55));
-        BtnAudio2.setVerifyInputWhenFocusTarget(false);
-        getContentPane().add(BtnAudio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 370, -1, 70));
-        BtnAudio2.getAccessibleContext().setAccessibleDescription("");
 
         BtnAudio3.setBackground(new java.awt.Color(117, 194, 197));
         BtnAudio3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icono_audio.png"))); // NOI18N
@@ -135,7 +127,31 @@ public class Ventana3 extends javax.swing.JFrame {
         BtnAudio3.setMinimumSize(new java.awt.Dimension(60, 55));
         BtnAudio3.setPreferredSize(new java.awt.Dimension(60, 55));
         BtnAudio3.setVerifyInputWhenFocusTarget(false);
-        getContentPane().add(BtnAudio3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 280, -1, 60));
+        BtnAudio3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BtnAudio3MouseClicked(evt);
+            }
+        });
+        getContentPane().add(BtnAudio3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 370, -1, 70));
+        BtnAudio3.getAccessibleContext().setAccessibleDescription("");
+
+        BtnAudio2.setBackground(new java.awt.Color(117, 194, 197));
+        BtnAudio2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icono_audio.png"))); // NOI18N
+        BtnAudio2.setBorder(null);
+        BtnAudio2.setContentAreaFilled(false);
+        BtnAudio2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnAudio2.setDoubleBuffered(true);
+        BtnAudio2.setMargin(new java.awt.Insets(20, 20, 20, 20));
+        BtnAudio2.setMaximumSize(new java.awt.Dimension(60, 55));
+        BtnAudio2.setMinimumSize(new java.awt.Dimension(60, 55));
+        BtnAudio2.setPreferredSize(new java.awt.Dimension(60, 55));
+        BtnAudio2.setVerifyInputWhenFocusTarget(false);
+        BtnAudio2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BtnAudio2MouseClicked(evt);
+            }
+        });
+        getContentPane().add(BtnAudio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 280, -1, 60));
 
         BtnMenu1.setBackground(new java.awt.Color(117, 194, 197));
         BtnMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icono_menu.png"))); // NOI18N
@@ -219,6 +235,27 @@ public class Ventana3 extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_BtnPrevActionPerformed
 
+    private void BtnAudio1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnAudio1MouseClicked
+        // TODO add your handling code here:
+        AudioClip Ventana3;
+        Ventana3 = java.applet.Applet.newAudioClip(getClass().getResource("/audio/Car_audio.wav"));
+        Ventana3.play();
+    }//GEN-LAST:event_BtnAudio1MouseClicked
+
+    private void BtnAudio2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnAudio2MouseClicked
+        // TODO add your handling code here:
+        AudioClip Ventana3;
+        Ventana3 = java.applet.Applet.newAudioClip(getClass().getResource("/audio/Apple_audio.wav"));
+        Ventana3.play();
+    }//GEN-LAST:event_BtnAudio2MouseClicked
+
+    private void BtnAudio3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnAudio3MouseClicked
+        // TODO add your handling code here:
+        AudioClip Ventana3;
+        Ventana3 = java.applet.Applet.newAudioClip(getClass().getResource("/audio/House_audio.wav"));
+        Ventana3.play();
+    }//GEN-LAST:event_BtnAudio3MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -253,6 +290,7 @@ public class Ventana3 extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Ventana3().setVisible(true);
+                Ventana2 reproducir = new Ventana2();
             }
         });
     }

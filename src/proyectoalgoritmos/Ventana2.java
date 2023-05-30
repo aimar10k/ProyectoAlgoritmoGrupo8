@@ -1,4 +1,5 @@
 package proyectoalgoritmos;
+import java.applet.AudioClip;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -60,7 +61,11 @@ public class Ventana2 extends javax.swing.JFrame {
         Music.setFocusPainted(false);
         Music.setFocusable(false);
         Music.setHideActionText(true);
-        Music.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icono_muted.png"))); // NOI18N
+        Music.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MusicMouseClicked(evt);
+            }
+        });
         getContentPane().add(Music, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 20, -1, -1));
 
         Titulo.setFont(new java.awt.Font("Super Comic", 0, 50)); // NOI18N
@@ -122,6 +127,13 @@ public class Ventana2 extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_BtnFacilActionPerformed
 
+    private void MusicMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MusicMouseClicked
+        // TODO add your handling code here:
+        AudioClip Ventana2;
+        Ventana2 = java.applet.Applet.newAudioClip(getClass().getResource("/audio/music.wav"));
+        Ventana2.play();
+    }//GEN-LAST:event_MusicMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -153,6 +165,8 @@ public class Ventana2 extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Ventana2().setVisible(true);
+                Ventana2 reproducir = new Ventana2();
+                
             }
         });
     }
