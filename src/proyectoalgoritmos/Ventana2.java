@@ -1,5 +1,9 @@
 package proyectoalgoritmos;
 import java.applet.AudioClip;
+import java.io.File;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -16,6 +20,8 @@ public class Ventana2 extends javax.swing.JFrame {
     /**
      * Creates new form Ventana2
      */
+    private Clip clip;
+    private boolean isPlaying = true;
     private String dato;
     public Ventana2() {
         initComponents();
@@ -61,9 +67,9 @@ public class Ventana2 extends javax.swing.JFrame {
         Music.setFocusPainted(false);
         Music.setFocusable(false);
         Music.setHideActionText(true);
-        Music.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                MusicMouseClicked(evt);
+        Music.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MusicActionPerformed(evt);
             }
         });
         getContentPane().add(Music, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 20, -1, -1));
@@ -127,12 +133,23 @@ public class Ventana2 extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_BtnFacilActionPerformed
 
-    private void MusicMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MusicMouseClicked
+    private void MusicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MusicActionPerformed
         // TODO add your handling code here:
         AudioClip Ventana2;
         Ventana2 = java.applet.Applet.newAudioClip(getClass().getResource("/audio/music.wav"));
         Ventana2.play();
-    }//GEN-LAST:event_MusicMouseClicked
+        
+        
+             boolean selected = Music.getModel().isSelected();  
+                 if (selected =true) {
+                     untoggled.setVisible(false);
+                     Ventana2.play();
+                }
+                else{
+                     toggled.setVisible(false);  
+                     Ventana2.stop();
+                }  
+    }//GEN-LAST:event_MusicActionPerformed
 
     /**
      * @param args the command line arguments
@@ -165,7 +182,6 @@ public class Ventana2 extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Ventana2().setVisible(true);
-                Ventana2 reproducir = new Ventana2();
                 
             }
         });
@@ -182,4 +198,14 @@ public class Ventana2 extends javax.swing.JFrame {
     private javax.swing.JButton Music;
     private javax.swing.JLabel Titulo;
     // End of variables declaration//GEN-END:variables
+
+    private static class toggled {
+
+        private static void setVisible(boolean b) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        public toggled() {
+        }
+    }
 }

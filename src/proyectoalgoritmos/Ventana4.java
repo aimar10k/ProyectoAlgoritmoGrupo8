@@ -33,7 +33,7 @@ public class Ventana4 extends javax.swing.JFrame {
         BtnMenu = new javax.swing.JButton();
         BtnMusic = new javax.swing.JButton();
         Manzana = new javax.swing.JLabel();
-        HOME1 = new javax.swing.JButton();
+        CHEESSE = new javax.swing.JButton();
         HOME = new javax.swing.JButton();
         APPLE = new javax.swing.JButton();
         CAR = new javax.swing.JButton();
@@ -77,15 +77,15 @@ public class Ventana4 extends javax.swing.JFrame {
         getContentPane().add(BtnMusic, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 30, 80, 70));
 
         Manzana.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/apple.png"))); // NOI18N
-        getContentPane().add(Manzana, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, 200, 200));
+        getContentPane().add(Manzana, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, 200, 200));
 
-        HOME1.setFont(new java.awt.Font("Super Comic", 1, 36)); // NOI18N
-        HOME1.setForeground(new java.awt.Color(255, 255, 255));
-        HOME1.setText("CHEESE");
-        HOME1.setBorder(null);
-        HOME1.setContentAreaFilled(false);
-        HOME1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(HOME1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 440, 290, 60));
+        CHEESSE.setFont(new java.awt.Font("Super Comic", 1, 36)); // NOI18N
+        CHEESSE.setForeground(new java.awt.Color(255, 255, 255));
+        CHEESSE.setText("CHEESE");
+        CHEESSE.setBorder(null);
+        CHEESSE.setContentAreaFilled(false);
+        CHEESSE.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(CHEESSE, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 440, 290, 60));
 
         HOME.setFont(new java.awt.Font("Super Comic", 1, 36)); // NOI18N
         HOME.setForeground(new java.awt.Color(255, 255, 255));
@@ -181,13 +181,13 @@ public class Ventana4 extends javax.swing.JFrame {
     private javax.swing.JButton BtnMenu;
     private javax.swing.JButton BtnMusic;
     private javax.swing.JButton CAR;
+    private javax.swing.JButton CHEESSE;
     private javax.swing.JLabel Fondo3;
     private javax.swing.JLabel FranjaBoton1;
     private javax.swing.JLabel FranjaBoton2;
     private javax.swing.JLabel FranjaBoton3;
     private javax.swing.JLabel FranjaBoton4;
     private javax.swing.JButton HOME;
-    private javax.swing.JButton HOME1;
     private javax.swing.JLabel Manzana;
     // End of variables declaration//GEN-END:variables
 }
