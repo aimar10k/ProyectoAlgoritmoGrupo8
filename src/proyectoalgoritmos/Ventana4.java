@@ -9,14 +9,59 @@ package proyectoalgoritmos;
  *
  * @author User
  */
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 public class Ventana4 extends javax.swing.JFrame {
+    ArrayList<Preguntas> preguntas; // Almacenará tus preguntas e imágenes
+    Preguntas preguntaActual; // La pregunta actualmente mostrada
 
     /**
      * Creates new form Ventana3
      */
     public Ventana4() {
         initComponents();
+        cargarPreguntas();
+        nuevaPregunta();
         this.setLocationRelativeTo(null);
+    }
+    
+    void cargarPreguntas() {
+    preguntas = new ArrayList<>();
+    
+    // Agrega tus pares imagen-respuesta aquí:
+    preguntas.add(new Preguntas("/img/apple.png", "APPLE", "5"));
+    preguntas.add(new Preguntas("/img/car.png", "CAR","10"));
+    preguntas.add(new Preguntas("/img/cheese.png", "CHEESE","15"));
+    preguntas.add(new Preguntas("/img/house.png", "HOUSE","5"));
+}
+
+    void nuevaPregunta() {
+        Collections.shuffle(preguntas);
+
+         if (!preguntas.isEmpty()) { 
+             preguntaActual = preguntas.remove(0); 
+             ImageIcon imagen = new ImageIcon(getClass().getResource(preguntaActual.getRutaImagen())); 
+             IMAGEN_PREGUNTA.setIcon(imagen);
+             VALORMONEDAS.setText(preguntaActual.monedas+" MONEDAS");
+             
+             
+
+            // Shuffle y asigna las respuestas a los botones
+            ArrayList<String> opciones = new ArrayList<>(Arrays.asList("CAR", "HOUSE", "APPLE", "CHEESE")); 
+            Collections.shuffle(opciones); 
+
+           CAR.setText(opciones.get(0)); 
+           HOUSE.setText(opciones.get(1));  
+           APPLE.setText(opciones.get(2));
+           CHEESSE.setText(opciones.get(3));  
+        }
+         else{
+             new Ventana5().setVisible(true);
+             this.dispose();
+         }
     }
 
     /**
@@ -32,9 +77,10 @@ public class Ventana4 extends javax.swing.JFrame {
         BtnConfig = new javax.swing.JButton();
         BtnMenu = new javax.swing.JButton();
         BtnMusic = new javax.swing.JButton();
-        Manzana = new javax.swing.JLabel();
+        IMAGEN_PREGUNTA = new javax.swing.JLabel();
+        VALORMONEDAS = new javax.swing.JLabel();
         CHEESSE = new javax.swing.JButton();
-        HOME = new javax.swing.JButton();
+        HOUSE = new javax.swing.JButton();
         APPLE = new javax.swing.JButton();
         CAR = new javax.swing.JButton();
         FranjaBoton1 = new javax.swing.JLabel();
@@ -76,8 +122,15 @@ public class Ventana4 extends javax.swing.JFrame {
         BtnMusic.setVerifyInputWhenFocusTarget(false);
         getContentPane().add(BtnMusic, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 30, 80, 70));
 
-        Manzana.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/apple.png"))); // NOI18N
-        getContentPane().add(Manzana, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, 200, 200));
+        IMAGEN_PREGUNTA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/apple.png"))); // NOI18N
+        getContentPane().add(IMAGEN_PREGUNTA, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, 200, 200));
+
+        VALORMONEDAS.setFont(new java.awt.Font("Super Comic", 1, 24)); // NOI18N
+        VALORMONEDAS.setForeground(new java.awt.Color(255, 255, 255));
+        VALORMONEDAS.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        VALORMONEDAS.setText("MONEDAS");
+        VALORMONEDAS.setToolTipText("");
+        getContentPane().add(VALORMONEDAS, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 260, 240, 30));
 
         CHEESSE.setFont(new java.awt.Font("Super Comic", 1, 36)); // NOI18N
         CHEESSE.setForeground(new java.awt.Color(255, 255, 255));
@@ -85,15 +138,25 @@ public class Ventana4 extends javax.swing.JFrame {
         CHEESSE.setBorder(null);
         CHEESSE.setContentAreaFilled(false);
         CHEESSE.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        CHEESSE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CHEESSEActionPerformed(evt);
+            }
+        });
         getContentPane().add(CHEESSE, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 440, 290, 60));
 
-        HOME.setFont(new java.awt.Font("Super Comic", 1, 36)); // NOI18N
-        HOME.setForeground(new java.awt.Color(255, 255, 255));
-        HOME.setText("HOUSE");
-        HOME.setBorder(null);
-        HOME.setContentAreaFilled(false);
-        HOME.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(HOME, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 310, 60));
+        HOUSE.setFont(new java.awt.Font("Super Comic", 1, 36)); // NOI18N
+        HOUSE.setForeground(new java.awt.Color(255, 255, 255));
+        HOUSE.setText("HOUSE");
+        HOUSE.setBorder(null);
+        HOUSE.setContentAreaFilled(false);
+        HOUSE.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        HOUSE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HOUSEActionPerformed(evt);
+            }
+        });
+        getContentPane().add(HOUSE, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 310, 60));
 
         APPLE.setFont(new java.awt.Font("Super Comic", 1, 36)); // NOI18N
         APPLE.setForeground(new java.awt.Color(255, 255, 255));
@@ -114,6 +177,11 @@ public class Ventana4 extends javax.swing.JFrame {
         CAR.setBorder(null);
         CAR.setContentAreaFilled(false);
         CAR.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        CAR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CARActionPerformed(evt);
+            }
+        });
         getContentPane().add(CAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, 290, 60));
 
         FranjaBoton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnopciones.png"))); // NOI18N
@@ -136,8 +204,34 @@ public class Ventana4 extends javax.swing.JFrame {
 
     private void APPLEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_APPLEActionPerformed
         // TODO add your handling code here:
+        verificarRespuesta(APPLE.getText());
     }//GEN-LAST:event_APPLEActionPerformed
 
+    private void CARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CARActionPerformed
+        // TODO add your handling code here:
+        verificarRespuesta(CAR.getText());
+    }//GEN-LAST:event_CARActionPerformed
+
+    private void CHEESSEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CHEESSEActionPerformed
+        // TODO add your handling code here:
+        verificarRespuesta(CHEESSE.getText());
+    }//GEN-LAST:event_CHEESSEActionPerformed
+
+    private void HOUSEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HOUSEActionPerformed
+        // TODO add your handling code here:
+        verificarRespuesta(HOUSE.getText());
+    }//GEN-LAST:event_HOUSEActionPerformed
+
+    void verificarRespuesta(String respuesta) {
+    if (respuesta.equals(preguntaActual.getRespuestaCorrecta())) {
+        // Respuesta correcta, muestra mensaje o realiza alguna acción.
+        JOptionPane.showMessageDialog(null, "la respuesta es correcta");
+        nuevaPregunta(); // Carga una nueva pregunta e imágenes en el formulario.
+    } else {
+        JOptionPane.showMessageDialog(null, "la respuesta es incorrecta sigue intentando");
+        // Respuesta incorrecta, muestra un mensaje de error o realiza alguna acción.
+    }
+}
     /**
      * @param args the command line arguments
      */
@@ -187,7 +281,8 @@ public class Ventana4 extends javax.swing.JFrame {
     private javax.swing.JLabel FranjaBoton2;
     private javax.swing.JLabel FranjaBoton3;
     private javax.swing.JLabel FranjaBoton4;
-    private javax.swing.JButton HOME;
-    private javax.swing.JLabel Manzana;
+    private javax.swing.JButton HOUSE;
+    private javax.swing.JLabel IMAGEN_PREGUNTA;
+    private javax.swing.JLabel VALORMONEDAS;
     // End of variables declaration//GEN-END:variables
 }
