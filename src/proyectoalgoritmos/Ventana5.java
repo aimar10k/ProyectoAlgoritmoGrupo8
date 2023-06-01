@@ -22,14 +22,14 @@ public class Ventana5 extends javax.swing.JFrame {
      */
     private Clip clip;
     private boolean isPlaying = true;
-    private String dato;
+    private int acumulador;
     public Ventana5() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
-    public void setmostrar(String dato){
-        this.dato = dato;
-        DatoNombre.setText(dato);
+    public void setResultado(int acumulador){
+        this.acumulador = acumulador;
+        ResultadoMonedas.setText(Integer.toString(acumulador));
     }
      
      
@@ -45,7 +45,7 @@ public class Ventana5 extends javax.swing.JFrame {
 
         Music = new javax.swing.JButton();
         Titulo = new javax.swing.JLabel();
-        DatoNombre = new javax.swing.JLabel();
+        ResultadoMonedas = new javax.swing.JLabel();
         CampNombre = new javax.swing.JLabel();
         Estrellas = new javax.swing.JLabel();
         Fondo2 = new javax.swing.JLabel();
@@ -76,10 +76,11 @@ public class Ventana5 extends javax.swing.JFrame {
         Titulo.setText("PUNTAJE TOTAL");
         getContentPane().add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, -1, -1));
 
-        DatoNombre.setFont(new java.awt.Font("Freitag Trial Heavy", 0, 36)); // NOI18N
-        DatoNombre.setForeground(new java.awt.Color(255, 255, 255));
-        DatoNombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(DatoNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 240, 260, 50));
+        ResultadoMonedas.setFont(new java.awt.Font("Super Comic", 0, 36)); // NOI18N
+        ResultadoMonedas.setForeground(new java.awt.Color(255, 255, 255));
+        ResultadoMonedas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ResultadoMonedas.setText("30 MONEDAS");
+        getContentPane().add(ResultadoMonedas, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, 310, 50));
 
         CampNombre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/campText.png"))); // NOI18N
         getContentPane().add(CampNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 220, 350, 90));
@@ -150,10 +151,10 @@ public class Ventana5 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel CampNombre;
-    private javax.swing.JLabel DatoNombre;
     private javax.swing.JLabel Estrellas;
     private javax.swing.JLabel Fondo2;
     private javax.swing.JButton Music;
+    private javax.swing.JLabel ResultadoMonedas;
     private javax.swing.JLabel Titulo;
     // End of variables declaration//GEN-END:variables
 

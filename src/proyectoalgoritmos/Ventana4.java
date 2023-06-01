@@ -17,6 +17,9 @@ import javax.swing.JOptionPane;
 public class Ventana4 extends javax.swing.JFrame {
     ArrayList<Preguntas> preguntas; // Almacenará tus preguntas e imágenes
     Preguntas preguntaActual; // La pregunta actualmente mostrada
+    int acum =0;
+    Ventana5 v5 = new Ventana5 ();
+     
 
     /**
      * Creates new form Ventana3
@@ -46,8 +49,6 @@ public class Ventana4 extends javax.swing.JFrame {
              ImageIcon imagen = new ImageIcon(getClass().getResource(preguntaActual.getRutaImagen())); 
              IMAGEN_PREGUNTA.setIcon(imagen);
              VALORMONEDAS.setText(preguntaActual.monedas+" MONEDAS");
-             
-             
 
             // Shuffle y asigna las respuestas a los botones
             ArrayList<String> opciones = new ArrayList<>(Arrays.asList("CAR", "HOUSE", "APPLE", "CHEESE")); 
@@ -63,6 +64,7 @@ public class Ventana4 extends javax.swing.JFrame {
              this.dispose();
          }
     }
+     
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -224,14 +226,28 @@ public class Ventana4 extends javax.swing.JFrame {
 
     void verificarRespuesta(String respuesta) {
     if (respuesta.equals(preguntaActual.getRespuestaCorrecta())) {
+        acum+= 5;
         // Respuesta correcta, muestra mensaje o realiza alguna acción.
-        JOptionPane.showMessageDialog(null, "la respuesta es correcta");
-        nuevaPregunta(); // Carga una nueva pregunta e imágenes en el formulario.
+        //JOptionPane.showMessageDialog(null, "la respuesta es correcta");
+         VentanaChica prueba = new VentanaChica();
+         prueba.setVisible(true);
+         // Carga una nueva pregunta e imágenes en el formulario.
+         nuevaPregunta();
+        
     } else {
-        JOptionPane.showMessageDialog(null, "la respuesta es incorrecta sigue intentando");
+        acum = 0;
+        VentanaChica2 prueba2 = new VentanaChica2();
+         prueba2.setVisible(true);
+        nuevaPregunta();
+        //JOptionPane.showMessageDialog(null, "la respuesta es incorrecta sigue intentando");
         // Respuesta incorrecta, muestra un mensaje de error o realiza alguna acción.
+        }
     }
-}
+    
+    //acum = acumulador;
+   
+    
+       
     /**
      * @param args the command line arguments
      */
